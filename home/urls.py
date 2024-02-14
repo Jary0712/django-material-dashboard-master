@@ -5,5 +5,5 @@ from home.views import myhome
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('includes/planning.html', views.myhome, name='kanban'),
+    path('includes/planning.html', views.myhome, name='planning'),
 ]

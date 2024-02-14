@@ -13,9 +13,10 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 
-{% load i18n static admin_material %} {% get_current_language as LANGUAGE_CODE
+{% load i18n static admin_material %} 
+{% comment %} {% get_current_language as LANGUAGE_CODE
 %} {% get_current_language_bidi as LANGUAGE_BIDI %} {% get_direction as
-direction %} {% get_admin_setting as admin_setting %}
+direction %} {% get_admin_setting as admin_setting %} {% endcomment %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,8 +59,8 @@ direction %} {% get_admin_setting as admin_setting %}
       href="{% static 'css/material-dashboard.css' %}"
       rel="stylesheet"
     />
-    include "{% load static%} <link rel="stylesheet" href="{%
-    static/css/style.css" %}"/>"
+    {% load static%} <link rel="stylesheet" href="{%
+    static/css/style.css" %}"/>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -80,17 +81,17 @@ direction %} {% get_admin_setting as admin_setting %}
     <main
       class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
     >
-      {% include "includes/navigation.html" %} {% block content %}{% endblock
-      content %}
+    {% include "includes/navigation.html" %} 
+    {% block content %}{% endblock content %}
     </main>
 
-    <!-- APP Configurator -->
+  <!-- APP Configurator -->
     {% include "includes/fixed-plugin.html" %}
+  <!--   Core JS Files   -->
+    {% include 'includes/scripts.html' %}
 
-    <!--   Core JS Files   -->
-    {% include 'includes/scripts.html' %} {% block scripts %} {% endblock
-    scripts%}
-
+    {% block scripts %}{% endblock scripts %}
+    
     <script>
       var win = navigator.platform.indexOf("Win") > -1;
       if (win && document.querySelector("#sidenav-scrollbar")) {

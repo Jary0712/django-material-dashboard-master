@@ -9,4 +9,4 @@ def index(request):
     return render(request, 'pages/index.html')
 
 def myhome(request):
-     return render(request, 'includes/kanban.html')
+     return render(request, 'includes/planning.html')

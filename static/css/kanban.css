@@ -1,0 +1,40 @@
+.content-wrapper.kanban {
+  height: 1px;
+}
+.content-wrapper.kanban .content {
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.content-wrapper.kanban .content .container,
+.content-wrapper.kanban .content .container-fluid {
+  width: max-content;
+  display: flex;
+  align-items: stretch;
+}
+.content-wrapper.kanban .card .card-body {
+  padding: 0.5rem;
+}
+.content-wrapper.kanban .card.card-row {
+  width: 340px;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.content-wrapper.kanban .card.card-row:first-child {
+  margin-left: 0;
+}
+.content-wrapper.kanban .card.card-row .card:last-child {
+  margin-bottom: 0;
+  border-bottom-width: 1px;
+}
+.content-wrapper.kanban .card.card-row .card .card-header {
+  padding: 0.5rem 0.75rem;
+}
+.content-wrapper.kanban .card.card-row .card .card-body {
+  padding: 0.75rem;
+}
+.content-wrapper.kanban .btn-tool.btn-link {
+  text-decoration: underline;
+  padding-left: 0;
+  padding-right: 0;
+}

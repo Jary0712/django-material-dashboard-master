@@ -1,6 +1,5 @@
-{% extends 'layouts/base.html' %} {% load i18n static %} {% block title %} Home
-{% endblock title %} {% block content %}
-
+{% extends 'layouts/base.html' %} {% load i18n static %} {% block title %} Home {% endblock title %} 
+{% block content %}
 <div class="container-fluid py-4">
   <div class="row">
     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -120,11 +119,11 @@
         </div>
         <div class="card-body">
           <h6 class="mb-0">Weekly Performance</h6>
-          <p class="text-sm">Last Campaign Performance</p>
+          <p class="text-sm">Last Week Performance</p>
           <hr class="dark horizontal" />
           <div class="d-flex">
             <i class="material-icons text-sm my-auto me-1">schedule</i>
-            <p class="mb-0 text-sm">campaign sent 2 days ago</p>
+            <p class="mb-0 text-sm">updated sent 2 days ago</p>
           </div>
         </div>
       </div>
@@ -149,8 +148,9 @@
         <div class="card-body">
           <h6 class="mb-0">Incomplete Tasks</h6>
           <p class="text-sm">
-            (<span class="font-weight-bolder">+15%</span>) increase in today
-            sales.
+            Last Few Months Performance (<span class="font-weight-bolder"
+              >+15%</span
+            >)
           </p>
           <hr class="dark horizontal" />
           <div class="d-flex">
@@ -753,6 +753,15 @@
         </div>
       </div>
     </div>
+	
+	<div class="card mb-3">
+	<div class="card-body p-3">
+    <div class="chart">
+      <canvas id="doughnut-chart" class="chart-canvas" height="300px"></canvas>
+    </div>
+  </div>
+</div>
+	
   </div>
   {% include 'includes/footer.html' %}
 </div>
